@@ -1,9 +1,0 @@
-{
- "name": "Outstanding by Food Court",
- "doctype": "Report",
- "report_name": "Outstanding by Food Court",
- "report_type": "Query Report",
- "module": "Fcm",
- "is_standard": "Yes",
- "ref_doctype": "Sales Invoice"
-}
