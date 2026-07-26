@@ -1,8 +1,0 @@
-{
- "doctype": "Report",
- "report_name": "Revenue Share vs MG Comparison",
- "report_type": "Query Report",
- "module": "Fcm",
- "is_standard": "Yes",
- "ref_doctype": "FCM Revenue Sales Upload"
-}
