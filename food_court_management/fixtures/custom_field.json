@@ -1,5 +1,6 @@
 [
  {
+  "name": "Sales Invoice-fcm_lease_contract",
   "doctype": "Custom Field",
   "dt": "Sales Invoice",
   "module": "Food Court Management",
@@ -12,6 +13,7 @@
   "in_standard_filter": 1
  },
  {
+  "name": "Sales Invoice-fcm_billing_type",
   "doctype": "Custom Field",
   "dt": "Sales Invoice",
   "module": "Food Court Management",
@@ -24,6 +26,7 @@
   "in_standard_filter": 1
  },
  {
+  "name": "Sales Invoice-fcm_billing_period",
   "doctype": "Custom Field",
   "dt": "Sales Invoice",
   "module": "Food Court Management",
@@ -35,6 +38,7 @@
   "in_standard_filter": 1
  },
  {
+  "name": "Customer-fcm_tenant_kyc",
   "doctype": "Custom Field",
   "dt": "Customer",
   "module": "Food Court Management",
@@ -45,6 +49,7 @@
   "insert_after": "customer_name"
  },
  {
+  "name": "Employee-attendance_device_id",
   "doctype": "Custom Field",
   "dt": "Employee",
   "module": "Food Court Management",
@@ -55,6 +60,7 @@
   "unique": 1
  },
  {
+  "name": "Purchase Invoice-fcm_food_court",
   "doctype": "Custom Field",
   "dt": "Purchase Invoice",
   "module": "Food Court Management",
