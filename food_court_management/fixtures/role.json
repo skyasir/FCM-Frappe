@@ -1,6 +1,26 @@
 [
- {"doctype": "Role", "role_name": "FCM Manager", "desk_access": 1},
- {"doctype": "Role", "role_name": "FCM User", "desk_access": 1},
- {"doctype": "Role", "role_name": "FCM Facility Supervisor", "desk_access": 1},
- {"doctype": "Role", "role_name": "FCM Accounts User", "desk_access": 1}
+ {
+  "name": "FCM Manager",
+  "doctype": "Role",
+  "role_name": "FCM Manager",
+  "desk_access": 1
+ },
+ {
+  "name": "FCM User",
+  "doctype": "Role",
+  "role_name": "FCM User",
+  "desk_access": 1
+ },
+ {
+  "name": "FCM Facility Supervisor",
+  "doctype": "Role",
+  "role_name": "FCM Facility Supervisor",
+  "desk_access": 1
+ },
+ {
+  "name": "FCM Accounts User",
+  "doctype": "Role",
+  "role_name": "FCM Accounts User",
+  "desk_access": 1
+ }
 ]
