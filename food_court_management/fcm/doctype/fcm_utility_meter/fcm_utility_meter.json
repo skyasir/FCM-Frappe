@@ -1,0 +1,97 @@
+{
+ "doctype": "DocType",
+ "name": "FCM Utility Meter",
+ "module": "Fcm",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "is_submittable": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "meter_number",
+   "label": "Meter Number",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "meter_type",
+   "label": "Meter Type",
+   "fieldtype": "Select",
+   "options": "Electricity\nWater\nDG/Generator",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "food_court",
+   "label": "Food Court",
+   "fieldtype": "Link",
+   "options": "FCM Food Court",
+   "reqd": 1
+  },
+  {
+   "fieldname": "shop_unit",
+   "label": "Shop/Unit (blank = Common Area)",
+   "fieldtype": "Link",
+   "options": "FCM Shop Unit"
+  },
+  {
+   "fieldname": "installation_date",
+   "label": "Installation Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "reading_frequency",
+   "label": "Reading Frequency",
+   "fieldtype": "Select",
+   "options": "Monthly\nFortnightly\nWeekly",
+   "default": "Monthly"
+  },
+  {
+   "fieldname": "uom",
+   "label": "Unit of Measure",
+   "fieldtype": "Data",
+   "default": "kWh"
+  },
+  {
+   "fieldname": "is_common_meter",
+   "label": "Is Common Meter",
+   "fieldtype": "Check",
+   "default": 0
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  }
+ ],
+ "autoname": "field:meter_number"
+}

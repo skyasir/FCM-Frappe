@@ -1,0 +1,158 @@
+{
+ "doctype": "DocType",
+ "name": "FCM Complaint",
+ "module": "Fcm",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "is_submittable": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "label": "Series",
+   "fieldtype": "Select",
+   "options": "FCM-COMP-.YYYY.-",
+   "default": "FCM-COMP-.YYYY.-"
+  },
+  {
+   "fieldname": "food_court",
+   "label": "Food Court",
+   "fieldtype": "Link",
+   "options": "FCM Food Court",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "shop_unit",
+   "label": "Shop/Unit",
+   "fieldtype": "Link",
+   "options": "FCM Shop Unit"
+  },
+  {
+   "fieldname": "tenant",
+   "label": "Tenant",
+   "fieldtype": "Link",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "complaint_source",
+   "label": "Complaint Source",
+   "fieldtype": "Select",
+   "options": "Customer Portal\nReception\nMobile App\nEmail\nPhone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "complaint_category",
+   "label": "Complaint Category",
+   "fieldtype": "Link",
+   "options": "FCM Complaint Category",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Text Editor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raised_on",
+   "label": "Raised On",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assigned_vendor",
+   "label": "Assigned Vendor",
+   "fieldtype": "Link",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "assigned_employee",
+   "label": "Assigned Employee",
+   "fieldtype": "Link",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Open\nAssigned\nIn Progress\nCompleted\nInspection\nClosed\nReopened",
+   "default": "Open",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sla_response_due",
+   "label": "SLA Response Due",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sla_resolution_due",
+   "label": "SLA Resolution Due",
+   "fieldtype": "Datetime",
+   "read_only": 1
+  },
+  {
+   "fieldname": "responded_on",
+   "label": "Responded On",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "resolved_on",
+   "label": "Resolved On",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "is_sla_breached",
+   "label": "SLA Breached",
+   "fieldtype": "Check",
+   "default": 0,
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_feedback_rating",
+   "label": "Customer Feedback Rating (1-5)",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "customer_feedback_remarks",
+   "label": "Customer Feedback Remarks",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  }
+ ],
+ "autoname": "naming_series:"
+}

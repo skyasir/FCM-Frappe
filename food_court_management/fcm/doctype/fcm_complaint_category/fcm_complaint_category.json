@@ -1,0 +1,62 @@
+{
+ "doctype": "DocType",
+ "name": "FCM Complaint Category",
+ "module": "Fcm",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "is_submittable": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "category_name",
+   "label": "Category Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "default_sla_response_hours",
+   "label": "Default SLA Response (Hours)",
+   "fieldtype": "Float"
+  },
+  {
+   "fieldname": "default_sla_resolution_hours",
+   "label": "Default SLA Resolution (Hours)",
+   "fieldtype": "Float"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  }
+ ],
+ "autoname": "field:category_name"
+}

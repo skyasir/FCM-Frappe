@@ -1,0 +1,134 @@
+{
+ "doctype": "DocType",
+ "name": "FCM CAM Cost Entry",
+ "module": "Fcm",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "is_submittable": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "label": "Series",
+   "fieldtype": "Select",
+   "options": "FCM-CAM-.YYYY.-",
+   "default": "FCM-CAM-.YYYY.-"
+  },
+  {
+   "fieldname": "food_court",
+   "label": "Food Court",
+   "fieldtype": "Link",
+   "options": "FCM Food Court",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "month",
+   "label": "Month",
+   "fieldtype": "Select",
+   "options": "January\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "year",
+   "label": "Year",
+   "fieldtype": "Int",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cost_category",
+   "label": "Cost Category",
+   "fieldtype": "Link",
+   "options": "FCM CAM Cost Category",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "allocation_method",
+   "label": "Allocation Method",
+   "fieldtype": "Select",
+   "options": "Square Foot Basis\nEqual Distribution\nPercentage Allocation\nFixed Allocation",
+   "fetch_from": "cost_category.default_allocation_method"
+  },
+  {
+   "fieldname": "purchase_invoice_reference",
+   "label": "Purchase Invoice Reference",
+   "fieldtype": "Link",
+   "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Pending Allocation\nAllocated",
+   "default": "Pending Allocation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "Company",
+   "fetch_from": "food_court.company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_account",
+   "label": "Expense Account",
+   "fieldtype": "Link",
+   "options": "Account",
+   "description": "GL expense account this CAM cost was booked to (from the linked Purchase Invoice)."
+  },
+  {
+   "fieldname": "cost_center",
+   "label": "Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center",
+   "fetch_from": "food_court.cost_center",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  }
+ ],
+ "autoname": "naming_series:"
+}

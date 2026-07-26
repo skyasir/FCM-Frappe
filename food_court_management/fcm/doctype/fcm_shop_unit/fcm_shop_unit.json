@@ -1,0 +1,101 @@
+{
+ "doctype": "DocType",
+ "name": "FCM Shop Unit",
+ "module": "Fcm",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "is_submittable": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "unit_number",
+   "label": "Unit Number",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "food_court",
+   "label": "Food Court",
+   "fieldtype": "Link",
+   "options": "FCM Food Court",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "floor",
+   "label": "Floor",
+   "fieldtype": "Link",
+   "options": "FCM Floor"
+  },
+  {
+   "fieldname": "carpet_area_sqft",
+   "label": "Carpet Area (Sqft)",
+   "fieldtype": "Float",
+   "reqd": 1
+  },
+  {
+   "fieldname": "chargeable_area_sqft",
+   "label": "Chargeable Area (Sqft)",
+   "fieldtype": "Float",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "Vacant\nReserved\nOccupied\nUnder Notice",
+   "default": "Vacant",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "current_tenant",
+   "label": "Current Tenant",
+   "fieldtype": "Link",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_contract",
+   "label": "Current Contract",
+   "fieldtype": "Link",
+   "options": "FCM Lease Contract",
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  }
+ ],
+ "autoname": "format:{food_court}-{unit_number}"
+}
