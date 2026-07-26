@@ -1,7 +1,7 @@
 {
- "name": "Fcm",
+ "name": "Food Court Management",
  "doctype": "Workspace",
- "label": "Fcm",
+ "label": "Food Court Management",
  "title": "Food Court Management",
  "module": "Fcm",
  "public": 1,
