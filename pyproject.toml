@@ -1,0 +1,20 @@
+[project]
+name = "food_court_management"
+authors = [
+    { name = "Innosphere Consulting LLP", email = "support@innosphereconsulting.com"}
+]
+description = "ERPNext-based Food Court Management System"
+requires-python = ">=3.10"
+readme = "README.md"
+dynamic = ["version"]
+dependencies = []
+
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+# Frappe Cloud uses this to pick a compatible bench.
+# NPM-style semver, must be bounded. >=15.0.0,<17.0.0 covers v15 and v16.
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"
+erpnext = ">=15.0.0,<17.0.0"
