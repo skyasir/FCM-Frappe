@@ -49,17 +49,6 @@
   "insert_after": "customer_name"
  },
  {
-  "name": "Employee-attendance_device_id",
-  "doctype": "Custom Field",
-  "dt": "Employee",
-  "module": "Food Court Management",
-  "fieldname": "attendance_device_id",
-  "label": "Biometric Attendance Device ID",
-  "fieldtype": "Data",
-  "insert_after": "employee_number",
-  "unique": 1
- },
- {
   "name": "Purchase Invoice-fcm_food_court",
   "doctype": "Custom Field",
   "dt": "Purchase Invoice",
