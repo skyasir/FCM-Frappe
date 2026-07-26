@@ -1,9 +1,0 @@
-{
- "name": "CAM Recovery Report",
- "doctype": "Report",
- "report_name": "CAM Recovery Report",
- "report_type": "Query Report",
- "module": "Fcm",
- "is_standard": "Yes",
- "ref_doctype": "FCM CAM Cost Entry"
-}
