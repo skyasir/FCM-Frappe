@@ -1,0 +1,105 @@
+{
+ "doctype": "DocType",
+ "name": "FCM Meter Reading",
+ "module": "Fcm",
+ "custom": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "is_submittable": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "label": "Series",
+   "fieldtype": "Select",
+   "options": "FCM-MR-.YYYY.-",
+   "default": "FCM-MR-.YYYY.-"
+  },
+  {
+   "fieldname": "meter",
+   "label": "Meter",
+   "fieldtype": "Link",
+   "options": "FCM Utility Meter",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reading_date",
+   "label": "Reading Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "previous_reading",
+   "label": "Previous Reading",
+   "fieldtype": "Float",
+   "read_only": 1
+  },
+  {
+   "fieldname": "current_reading",
+   "label": "Current Reading",
+   "fieldtype": "Float",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "consumption",
+   "label": "Consumption",
+   "fieldtype": "Float",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "rate_per_unit",
+   "label": "Rate per Unit",
+   "fieldtype": "Currency"
+  },
+  {
+   "fieldname": "amount",
+   "label": "Amount",
+   "fieldtype": "Currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billed",
+   "label": "Billed",
+   "fieldtype": "Check",
+   "default": 0,
+   "read_only": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "report": 1,
+   "export": 1
+  },
+  {
+   "role": "FCM User",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1
+  }
+ ],
+ "autoname": "naming_series:"
+}
