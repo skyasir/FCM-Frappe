@@ -1,0 +1,9 @@
+{
+ "name": "Occupancy Summary",
+ "doctype": "Report",
+ "report_name": "Occupancy Summary",
+ "report_type": "Query Report",
+ "module": "Fcm",
+ "is_standard": "Yes",
+ "ref_doctype": "FCM Shop Unit"
+}
